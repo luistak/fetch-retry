@@ -1,0 +1,9 @@
+{
+  "name": "fetchretry",
+  "version": "1.0.0",
+  "description": "Fetch Retry",
+  "main": "src/index.js",
+  "repository": "git@github.com:luistak/fetch-retry.git",
+  "author": "Luis <takahashihideki408@gmail.com>",
+  "license": "MIT"
+}
