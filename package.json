@@ -1,5 +1,5 @@
 {
-  "name": "fetchretry",
+  "name": "fetch-retry",
   "version": "1.0.0",
   "description": "Fetch Retry",
   "main": "src/index.js",

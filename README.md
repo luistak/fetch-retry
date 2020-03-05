@@ -1,22 +1,11 @@
 # fetch-retry
-
 This library is a wrapper over the fetch function adding a retry and delay functionality
-
-
-## Installation
-```sh
-npm install fetchretry
-
-# or
-
-yarn add fetchretry
-```
 
 ## Usages
 
 ### Common usage
 ```js
-import fetchRetry from 'fetchretry';
+import fetchRetry from 'fetch-retry';
 
 // Mocked urls:
 let url500 = 'https://www.mocky.io/v2/5e593e992f0000d09896258c';
@@ -32,7 +21,7 @@ fetchRetry(url200)
 
 ### Limit
 ```js
-import fetchRetry from 'fetchretry';
+import fetchRetry from 'fetch-retry';
 
 fetchRetry(url401, { limit: 3 });
 // > ERROR: GET https://www.mocky.io/v2/5e597b2e2f0000d97b9626e3 net::ERR_ABORTED 401 (Unauthorized)
@@ -42,7 +31,7 @@ fetchRetry(url401, { limit: 3 });
 
 ### Delay
 ```js
-import fetchRetry from 'fetchretry';
+import fetchRetry from 'fetch-retry';
 
 fetchRetry(url401, { limit: 3, delay: 3000 });
 // Wait 3000 miliseconds

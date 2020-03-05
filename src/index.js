@@ -2,7 +2,7 @@ let LIMIT = 1;
 
 var sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-var fetchRetry = async (url, { limit = LIMIT, delay, ...opts } = {}) => {
+var fetchRetryable = async (url, { limit = LIMIT, delay, ...opts } = {}) => {
   try {
     const response = await fetch(url, opts);
     const { status, statusText } = response;
@@ -19,8 +19,8 @@ var fetchRetry = async (url, { limit = LIMIT, delay, ...opts } = {}) => {
 
     if (delay) await sleep(delay);
 
-    return await fetchRetry(url, { limit: limit - 1, delay, ...opts });
+    return await fetchRetryable(url, { limit: limit - 1, delay, ...opts });
   }
 }
 
-export default fetchRetry;
+export default fetchRetryable;
